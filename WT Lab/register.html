@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	h5 {
+		font-weight: 500;
+	}
+	a {
+		color: blue;
+	}
+	.content {
+		font-family: Arial, Helvetica, sans-serif;
+		width: 90%;
+	}
+	.details {
+		margin-left: 10px;
+		width: 450px;
+		height: 300px;
+	}
+	.details tr td input {
+		height: 50%;
+		border-radius: 10px;
+		border: 1px solid grey;
+		padding: 5px 0 5px 10px;
+		margin-left: 10px;
+	}
+	.cond {
+		padding-left: 18px;
+		width: 92%;
+		text-align: left;
+		font-size: small;
+	}
+	.btn {
+		margin-left: 5px;
+		border-radius: 20px;
+		width: 400px;
+		height: 50px;
+		background-color: rgb(0, 110, 255);
+		border: 0px;
+		font-size: large;
+		color: white;
+		cursor: pointer;
+	}
+	.foot {
+		font-size: small;
+	}
+</style>
+<body>
+	<div style="text-decoration: none;float: right;margin: 55px 15px 0 0;font-family: Arial;font-size:17px;">
+		Already a member? <a href="signIn.html"> Sign in</a>
+	</div>
+	<a href="Week-1&2.html"><img src="ebay.jpeg" style="width: 118px;margin: 15px 0 0 30px;" alt=""></a>
+	<br><br>
+	<table style="width: 40%;padding: 15px;background-color: rgb(0, 110, 255);margin: auto;color: white;">
+		<tr>
+			<td style="vertical-align: top">
+				<svg aria-label="Information" focusable="false" width="24" height="24" role="img" class="icon icon--information-filled"><title id="title">Information</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12C23.994 5.375 18.625.006 12 0zm0 10a1 1 0 011 1v6a1 1 0 01-2 0v-6a1 1 0 011-1zm0-4a1 1 0 110 2 1 1 0 010-2z"></path></svg>
+			</td>
+			<td class="content">
+				To buy and sell on <b>www.ebay.com</b> or other eBay sites internationally, existing users can login using their credentials or new users can register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in
+			</td>
+		</tr>
+	</table><br><br>
+	<center style="font-family: Arial, Helvetica, sans-serif;">
+		<span style="font-size:35px;"><b>Create an account</b></span><br><br>
+		<input type="radio" name="" id=""> Personal account
+		<input type="radio" name="" id=""> Business account<br><br>
+		<table class="details">
+			<tr>
+				<td>
+					<input type="text" placeholder="First Name" style="width: 83%;">
+				</td>
+				<td>
+					<input type="text" placeholder="Last Name" style="width: 83%;">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="text" placeholder="Email" style="width: 92%;">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="text" placeholder="Password" style="width: 92%;">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div class="cond">By clicking Register, you agree that you have read and accepted our<br><a href="">User Agreement</a>, <a href="">User Privacy Notice</a>, <a href="">Rules and Policies</a>.</div>
+				</td>
+			</tr>
+		</table>
+		<button class="btn" onclick="window.location.href='Week-1&2.html'">Register</button><br><br><hr><br><br>
+		<div class="foot">
+		Copyright © 1995-2023 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Payments Terms of Use, Cookies, Do not sell my personal information and AdChoice</div>
+	</center><br><br><br>
+</body>
+</html>

@@ -1,0 +1,210 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Market Sans","Helvetica Neue", Helvetica,Arial,Roboto,sans-serif;
+}
+hr {
+	border: 1px solid #ddd;
+}
+.head {
+	position: relative;
+	left: 3%;
+	width: 94%;
+	padding: 6px 0px 0px;
+	font-size: small;
+}
+.head table td a, .seeall {
+	text-decoration: none;
+	color: black;
+	padding-right: 5px;
+}
+.search {
+	position: relative;
+	left: 3%;
+	width: 94%;
+}
+.menu {
+	position: relative;
+	left: 3%;
+	width: 94%;
+	padding-bottom: 10px;
+}
+.search table td a {
+	text-decoration: none;
+	font-size: small;
+}
+.sb {
+	height: 36px;
+	width: 160px;
+	background-color: #0275d8;
+	border-style: none;
+	color: white;
+}
+.menu table td a {
+	text-decoration: none;
+	font-size: small;
+	padding-right: 5px;
+}
+.text {
+	position: relative;
+	left: 3%;
+	font-size:larger;
+}
+.readmore {
+	position: relative;
+	left: 3%;
+	width: 94%;
+	background-color: rgb(70, 10, 10);
+}
+.readmore table tr td {
+	color: white;
+}
+.readmore table tr td input {
+	border: 1px solid white;
+	background-color: rgb(70, 10, 10);
+	padding: 10px;
+	color: white;
+}
+.rmbtm:hover {
+	background-color: white;
+	color: rgb(70, 10, 10);
+	cursor: pointer;
+}
+.accesserary {
+	position: relative;
+	left: 3%;
+	width: 94%;
+}
+.accesserary table tr {
+	text-align: center;
+}
+.accesserary table tr td:hover {
+	cursor: pointer;
+}
+.accesserary table tr td a {
+	text-decoration: none;
+}
+.accesserary table tr td img {
+	height: 120px;
+	border-radius: 50%;
+}
+h1 {
+	display: inline;
+	margin-left: 20px;
+}
+.pcard {
+	margin: 30px 0 0 20px;
+	width: 750px;
+	height: 220px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+.phead {
+	padding: 20px;
+}
+.pcontent {
+	padding: 10px 0 0 30px;
+	display: inline-flex;
+}
+.pcontent img {
+	width: 130px;
+}
+.prod {
+	padding-left: 20px;
+	width: 300px;
+	margin-right: 30px;
+}
+.cart {
+	display: inline-flex;
+}
+.checkout {
+	margin: 30px 10px 0 20px;
+	width: 340px;
+	height: 250px;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
+.chkbtn {
+	background-color: #0275d8;
+	color: white;
+	font-size: large;
+	margin: 20px;
+	width: 300px;
+	height: 50px;
+	border: 0px;
+	border-radius: 30px;
+}
+.chkbtn:hover {
+	background-color: #0299f9;
+	cursor: pointer;
+}
+.checkout span {
+	margin: 0 15px 0px 15px;
+	line-height: 30px;
+}
+.logo {
+	margin: 8px 10px 0 99px;
+	width: 950px;
+}
+.pay {
+	display: inline-flex;
+}
+.payOpt {
+	margin: 45px 20px 20px 100px;
+	width: 630px;
+}
+table.payOpt {
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+.payOpt tr td{
+	padding: 15px;
+}
+.confirm {
+	margin-top: 45px;
+	line-height: 25px;
+	padding: 15px;
+	border: 1px solid #ddd;
+	width: 310px;
+	height: 460px;
+}
+.addrs {
+	margin: 0px 20px 20px 100px;
+	width: 600px;
+	line-height: 25px;
+	padding: 15px;
+	padding-top: 5px;
+	border: 1px solid #ddd;
+}
+.ordBtn {
+	background-color: #0275d8;
+	border: 1px solid #0275d8;
+	color: white;
+	font-size: larger;
+	font-weight: bold;
+	padding: 20px 40px;
+	margin: 30px 30px 0 0;
+	width: 350px;
+}
+.ordBtn:hover {
+	background-color: white;
+	border: 2px solid #0275d8;
+	color: #0275d8;
+	cursor: pointer;
+}
+.shping {
+	background-color: white;
+	border: 2px solid #0275d8;
+	color: #0275d8;
+	font-size: larger;
+	font-weight: bold;
+	padding: 20px 40px;
+	margin: 30px 30px 0 0;
+	width: 350px;
+}
+.shping:hover {
+	background-color: #0275d8;
+	border: 1px solid #0275d8;
+	color: white;
+	cursor: pointer;
+}

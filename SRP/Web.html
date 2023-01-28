@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script
+      src="https://kit.fontawesome.com/ea5cac0a5d.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background: #fff;
+        padding: 0;
+        margin: 0;
+      }
+      .navigate {
+        background: #000;
+        height: 40px;
+        width: 100%;
+      }
+      .nav-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+      }
+      .nav-ul li {
+        border-right: 1px solid #bbb;
+        float: left;
+        padding: 10px;
+      }
+      .nav-ul li a {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .nav-ul li:hover {
+        background-color: #333;
+      }
+      .tempdrop {
+        position: relative;
+        display: inline-block;
+      }
+      .temp-op {
+        display: none;
+        position: absolute;
+        background-color: #444;
+        top: 40px;
+        left: 0%;
+        min-width: 220px;
+        overflow: auto;
+        height: 300px;
+        z-index: 1;
+      }
+      .temp-op a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .temp-op a:hover {
+        background-color: #666;
+      }
+      .tempdrop:hover .temp-op {
+        display: block;
+      }
+      .blogdrop {
+        position: relative;
+        display: inline-block;
+      }
+      .blog-op {
+        display: none;
+        position: absolute;
+        background-color: #444;
+        top: 40px;
+        left: 0%;
+        min-width: 200px;
+        z-index: 1;
+      }
+      .blog-op a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .blog-op a:hover {
+        background-color: #666;
+      }
+      .blogdrop:hover .blog-op {
+        display: block;
+      }
+      .w {
+        position: absolute;
+        color: rgb(246, 54, 86);
+        top: 1.8%;
+        right: 1.5%;
+        text-decoration: none;
+        font-size: medium;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        float: right;
+      }
+      .s {
+        color: rgb(70, 162, 255);
+      }
+      .searchbox {
+        position: absolute;
+        background: url("images/web.jpg");
+        background-repeat: no-repeat;
+        height: 60%;
+        width: 80%;
+        left: 10%;
+        top: 15%;
+      }
+      .searchbar {
+        position: absolute;
+        border-radius: 8px;
+        height: 25px;
+        width: 150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .st1 {
+        position: absolute;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: medium;
+        top: 25%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        line-height: 25px;
+      }
+      .st2 {
+        position: absolute;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: small;
+        bottom: 20%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        line-height: 25px;
+      }
+      .t1 {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .t2 {
+        position: absolute;
+        top: 94%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: x-small;
+      }
+      .templates {
+        position: absolute;
+        top: 102%;
+        height: 330px;
+        width: 100%;
+      }
+      .scrollmenu {
+        position: relative;
+        overflow: auto;
+        height: 100%;
+        white-space: nowrap;
+        padding: 0px 50px 0px;
+      }
+      .scrollmenu a {
+        display: inline-block;
+        text-align: center;
+        height: 269px;
+        width: 155px;
+        text-decoration: none;
+        border: 2px solid #ccc;
+        margin: 0px 2px 0px;
+        padding: 30px 10px 10px;
+      }
+      .scrollmenu a:hover {
+        background-color: gray;
+      }
+      img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .tempcover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .tempcover::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 100;
+        height: 100%;
+        width: 50px;
+        background-image: linear-gradient(90deg, black, transparent);
+      }
+      .tempcover::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        z-index: 100;
+        height: 100%;
+        width: 50px;
+        background-image: linear-gradient(-90deg, black, transparent);
+      }
+      .b1 {
+        position: absolute;
+        top: 174%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .b2 {
+        position: absolute;
+        top: 182%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: x-small;
+      }
+      .blog {
+        position: absolute;
+        top: 190%;
+        height: 262px;
+        width: 100%;
+      }
+      .blogmenu {
+        position: relative;
+        overflow: auto;
+        height: 100%;
+        white-space: nowrap;
+        padding: 0px 50px 0px;
+      }
+      .blogmenu a {
+        display: inline-block;
+        text-align: center;
+        border: 2px solid #ccc;
+        height: 200px;
+        width: 360px;
+        text-decoration: none;
+        margin: 0px 2px 0px;
+        padding: 30px 10px 10px;
+      }
+      .blogmenu a:hover {
+        background-color: gray;
+      }
+      .blogcover {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .blogcover::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 100;
+        height: 100%;
+        width: 50px;
+        background-image: linear-gradient(90deg, black, transparent);
+      }
+      .blogcover::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        z-index: 100;
+        height: 100%;
+        width: 50px;
+        background-image: linear-gradient(-90deg, black, transparent);
+      }
+      .space {
+        position: absolute;
+        top: 300%;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navigate">
+      <ul class="nav-ul" style="display: inline">
+        <li><a href="Web.html">Home</a></li>
+        <li class="tempdrop">
+          <a href="#templates">Templates</a>
+          <div class="temp-op">
+            <a href="#">Technology</a>
+            <a href="#">Business</a>
+            <a href="#">Art & Design</a>
+            <a href="#">Food & Restaurants</a>
+            <a href="#">Architecture & Building</a>
+            <a href="#">Education</a>
+            <a href="#">Fashion</a>
+            <a href="#">Interior Design</a>
+            <a href="#">Transportation</a>
+            <a href="#">Industrial</a>
+            <a href="#">Sports & Fitness</a>
+            <a href="#">entertainment</a>
+            <a href="#">Travel & Adventure</a>
+            <a href="#">Medicine & Sciences</a>
+            <a href="#">Offers & Sales</a>
+          </div>
+        </li>
+        <li class="blogdrop">
+          <a href="#blog">Blog</a>
+          <div class="blog-op">
+            <a href="#">Personal</a>
+            <a href="#">Advertising</a>
+            <a href="#">Fashion Designing</a>
+            <a href="#">Hotels & Restaurants</a>
+            <a href="#">Multimedia</a>
+            <a href="#">News & Broadcast</a>
+            <a href="#">Review</a>
+            <a href="#">Travel & Adventure</a>
+          </div>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="Login.html">Login</a></li>
+      </ul>
+      <a href="#icon" class="w">Web<span class="s">Script</span></a>
+    </div>
+    <div class="searchbox">
+      <label class="st1"
+        >Make your ideas come to<br />life with WebScript.</label
+      >
+      <input type="text" class="searchbar" placeholder="  Enter Keyword" />
+      <label class="st2"
+        >It's more than a website.<br />It's your future.</label
+      >
+    </div>
+    <label class="t1"><b>Website Templates Categories</b></label>
+    <label class="t2"
+      >Choose the best templates and use our visual template editor to add and
+      modify the content with no coding. The design of any page template looks
+      great on all devices.</label
+    >
+    <div class="templates">
+      <div class="tempcover">
+        <div class="scrollmenu">
+          <a href="#technology" data-title="Technology">
+            <img alt="Technology" src="images/Technology.jpg" />
+          </a>
+          <a href="#business-law" data-title="Business &amp; Law">
+            <img alt="Business &amp; Law" src="images/Bussiness&laws.jpg" />
+          </a>
+          <a href="#art-design" data-title="Art &amp; Design">
+            <img alt="Art &amp; Design" src="images/Art&design.jpg" />
+          </a>
+          <a href="#food-restaurant" data-title="Food &amp; Restaurant">
+            <img
+              alt="Food &amp; Restaurant"
+              src="images/Food&restaurants.jpg"
+            />
+          </a>
+          <a
+            href="#architecture-building"
+            data-title="Architecture &amp; Building"
+          >
+            <img
+              alt="Architecture &amp; Building"
+              src="images/Architecture&buildings.jpg"
+            />
+          </a>
+          <a href="#education" data-title="Education">
+            <img alt="Education" src="images/Education.jpg" />
+          </a>
+          <a href="#fashion-beauty" data-title="Fashion &amp; Beauty">
+            <img alt="Fashion &amp; Beauty" src="images/Fashion&beauty.jpg" />
+          </a>
+          <a href="#interior" data-title="Interior">
+            <img alt="Interior" src="images/Interior.jpg" />
+          </a>
+          <a href="#cars-transportation" data-title="Cars &amp; Transportation">
+            <img
+              alt="Cars &amp; Transportation"
+              src="images/Cars&Transportation.jpg"
+            />
+          </a>
+          <a href="#industrial" data-title="Industrial">
+            <img alt="Industrial" src="images/industrial.jpg" />
+          </a>
+          <a href="#sports" data-title="Sports">
+            <img alt="Sports" src="images/Sports.jpg" />
+          </a>
+          <a href="#music-entertainment" data-title="Music &amp; Entertainment">
+            <img alt="Music &amp; Entertainment" src="images/Music.jpg" />
+          </a>
+          <a href="#travel-hotels" data-title="Travel &amp; Hotels">
+            <img alt="Travel &amp; Hotels" src="images/Travel&hotels.jpg" />
+          </a>
+          <a href="#medicine-science" data-title="Medicine &amp; Science">
+            <img
+              alt="Medicine &amp; Science"
+              src="images/Medicine&science.jpg"
+            />
+          </a>
+          <a href="#sale" data-title="Sale">
+            <img alt="Sale" src="images/Sale.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <label class="b1"><b>Blog Templates Categories</b></label>
+    <label class="b2"
+      >You can choose templates from our latest responsive templates and then
+      customize them with the code-free drag-and-drop template editor.</label
+    >
+    <div class="blog">
+      <div class="blogcover">
+        <div class="blogmenu">
+          <a href="#bussiness" data-title="bussiness">
+            <img alt="bussiness" src="images\Blog\bussiness.jpg" />
+          </a>
+          <a href="#fasion" data-title="Fashion">
+            <img alt="fashion" src="images\Blog\fashion.jpg" />
+          </a>
+          <a href="#food" data-title="Food">
+            <img alt="Food" src="images\Blog\food.jpg" />
+          </a>
+          <a href="#multimedia" data-title="Multimedia">
+            <img alt="Multimedia" src="images\Blog\multimedia.jpg" />
+          </a>
+          <a href="#news" data-title="News">
+            <img alt="News" src="images\Blog\news.jpg" />
+          </a>
+          <a href="#personal" data-title="personal">
+            <img alt="personal" src="images\Blog\personal.jpg" />
+          </a>
+          <a href="#review" data-title="Review">
+            <img alt="Review" src="images\Blog\review.jpg" />
+          </a>
+          <a href="#travel-hotels" data-title="Travel">
+            <img alt="Travel" src="images\Blog\travel.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

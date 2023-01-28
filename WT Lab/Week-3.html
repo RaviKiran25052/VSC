@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week-2</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+    .nav {
+        background-color: black;
+        width: 100%;
+        height: 40px;
+    }
+    .nav div {
+        height: 30px;
+        width: 80px;
+        border-right: 1px solid white;
+        float: left;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .nav div a {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color:white;
+    }
+    .nav div:hover{
+        background-color: red;
+        cursor:cell;
+    }
+    .images {
+        margin: auto;
+        padding: 50px;
+        height: 200px;
+        width: 1020px;
+    }
+    .images div {
+        margin: 20px;
+        float: left;
+        text-align: center;
+    }
+    a {
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+    .sky a:visited {
+        color: red;
+    }
+    .clouds a:hover{
+        color:darkgreen;
+        text-decoration: underline;
+    }
+    .land a:active {
+        color: darkgoldenrod;
+        text-decoration: underline;
+    }
+    .bg1 {
+        background-image: url("https://unsplash.com/assets/api/applications/devs/google-e89ce09827d733ec03d63efeb0b32794281ee4bd8d1e06e83438c4971ce97d77.jpg");
+        height: 300px;
+        width: 50%;
+        border: 1px solid black;
+        margin: auto;
+        background-repeat: no-repeat;
+    }
+    .bg2 {
+        background-image: url("https://forums.redflagdeals.com/avatar/1497501_1570821803.jpg");
+        height: 100px;
+        width: 50%;
+        border: 1px solid black;
+        margin: auto;
+        background-repeat:repeat-x;
+    }
+    .block {
+        text-align: center;
+    }
+    .bg3 {
+        background-image: url("https://forums.redflagdeals.com/avatar/1497501_1570821803.jpg");
+        height: 400px;
+        width: 10%;
+        border: 1px solid black;
+        background-repeat:repeat-y;
+        display: inline-block;
+        margin-right: 30px;
+    }
+    .bg4 {
+        background-image: url("https://forums.redflagdeals.com/avatar/1497501_1570821803.jpg");
+        height: 300px;
+        width: 44%;
+        border: 1px solid black;
+        background-repeat:repeat;
+        display: inline-block;
+    }
+</style>
+<body>
+    <div class="nav">
+        <div>
+            <a href="">Home</a>
+        </div>
+        <div>
+            <a href="">products</a>
+        </div>
+        <div>
+            <a href="">cart</a>
+        </div>
+        <div>
+            <a href="">login</a>
+        </div>
+    </div>
+    <div class="images">
+        <div class="sky">
+            <img src="https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753__340.jpg" height="200px"><br>
+            <a href=""><b>Sky</b></a>
+        </div>
+        <div class="clouds">
+            <img src="https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055__340.jpg" height="200px"><br>
+            <a href=""><b>Clouds</b></a>
+        </div>
+        <div class="land">
+            <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__340.jpg" height="200px"><br>
+            <a href=""><b>Land</b></a>
+        </div>
+    </div>
+    <br>
+    <div class="bg1">
+    </div><br><br>
+    <div class="bg2">
+    </div><br><br>
+    <div style="width:100%;" class="block">
+        <div class="bg3">
+        </div>
+        <div class="bg4">
+        </div><br><br>
+    </div>
+</body>
+</html>

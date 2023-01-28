@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>week-4</title>
+</head>
+<script type="text/JavaScript">
+	function T_Date() {
+		var today = new Date();
+		var d = today.getDate();
+		var m = (today.getMonth()+1);
+		var y = today.getFullYear();
+		if (d<9) {
+			d = '0'+d
+		}
+		if (m<9) {
+			m = '0'+m
+		}
+		var today = d+'-'+m+'-'+y;
+      alert("The current date was : "+ today);
+   }
+	function fact() {
+		var n = prompt("Enter any integer : ");
+		var k = n;
+		var res = 1;
+		while(n>0) {
+			res = res*n;
+			n = n-1;
+		}
+		alert("The factorial of "+k+" is : "+res);
+	}
+	function Mtable() {
+		var n = prompt("Enter any integer : ");
+		var k = 1;
+		var m = "";
+		while(k<=10) {
+			m = m+('\n'+n+' x '+k+' = '+(n*k));
+			k += 1;
+		}
+		alert("The factorial of "+n+" is : "+m);
+	}
+	function nSum() {
+		var sum = 0;
+		var c = 1;
+		while(true) {
+			var n = prompt("Enter the n value : ");
+			n = parseInt(n);
+			sum += n;
+			if (confirm("Want to add another integer...!") == true) {
+				c += 1;
+			} 
+			else {
+				alert("The Sum of "+c+" Elements is : "+sum);
+   			break;
+			}
+		}
+	}
+</script>
+<style>
+	.box{
+		margin-right: 50px;
+		padding: 5% 0 5% 5%;
+		height: 300px;
+		float: left;
+	}
+</style>
+<body>
+	<div class="box">
+		<div>
+			<h2>1). Pop-up Box for showing date</h2>
+			<center><p>Click the below button to get the date</p>
+			<button onclick= "T_Date()">get Date</button></center>
+		</div><br><br>
+		<div>
+			<h2>2). Pop-up Box for finding the factorial</h2>
+			<center><p>Click the below button to get the factorial</p>
+			<button onclick= "fact()">get factorial</button></center>
+		</div>
+	</div>
+	<div class="box">
+		<div>
+			<h2>3). Pop-up Box for finding the multiplication table</h2>
+			<center><p>Click the below button to get the Multiplication's upto 10</p>
+			<button onclick= "Mtable()">get Table</button></center>
+		</div><br><br>
+		<div>
+			<h2>4). Pop-up Box for finding the Sum</h2>
+			<center><p>Click the below button to get the Sum of n-elements</p>
+			<button onclick= "nSum()">get Sum</button></center>
+		</div>
+	</div>
+</body>
+</html>
