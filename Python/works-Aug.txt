@@ -1,0 +1,6 @@
+DAA	- 4 psuedo codes (A4)
+AITT	- uninformed and informed methods (A4)
+SRP	- 1.1.7 and 1.3.6 (Notes)
+DSP	- w.3 (NN)
+DBMS	- lab (Notes)
+AITT	- lab (Notes)

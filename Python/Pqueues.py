@@ -1,0 +1,12 @@
+from queue import PriorityQueue
+pq = PriorityQueue()
+pq.put("A")
+pq.put("D")
+pq.put("C")
+pq.put("E")
+pq.put("B")
+print(pq.get())
+print(pq.get())
+print(pq.get())
+print(pq.get())
+print(pq.get())
